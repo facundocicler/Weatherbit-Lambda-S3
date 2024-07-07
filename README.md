@@ -2,15 +2,15 @@
 
 Este proyecto utiliza AWS Lambda, Docker, AWS Glue y AWS Athena para obtener datos meteorológicos de múltiples ubicaciones utilizando la API de Weatherbit, almacenarlos en un bucket de Amazon S3, cargarlos en una base de datos administrada por AWS Glue y realizar consultas utilizando AWS Athena.
 
-## Configuración
+## Configuración Inicial
 
-### Variables de Entorno
+### Usuario IAM y Configuración de AWS CLI
 
-Antes de comenzar, asegúrate de configurar las siguientes variables de entorno:
+Antes de comenzar, asegúrate de tener configurado un usuario en AWS IAM con los siguientes permisos mínimos:
+
+- `AmazonEC2ContainerRegistryFullAccess`: Acceso completo a Amazon ECR para crear repositorios, subir y gestionar imágenes de contenedor.
+
+Configura AWS CLI con las credenciales de este usuario ejecutando:
 
 ```bash
-export WEATHERBIT_API_KEY='tu_clave_api_de_weatherbit'
-export BUCKET_LOCATIONS='tu_bucket_de_ubicaciones_en_s3'
-export FILE_LOCATIONS='ubicacion_del_archivo_en_el_bucket_de_ubicaciones'
-export BUCKET_REGISTRY='tu_bucket_de_registro_en_s3'
-export SNS_TOPIC_ARN='arn_del_tema_sns_para_notificaciones'
+aws configure
