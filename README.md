@@ -6,18 +6,17 @@ Este proyecto utiliza AWS Lambda, Docker, AWS Glue y AWS Athena para obtener dat
 
 ### Usuario IAM y Configuración de AWS CLI
 
-Antes de comenzar, asegúrate de tener configurado un usuario en AWS IAM con los siguientes permisos mínimos:
+1. Antes de comenzar, asegúrate de tener configurado un usuario en AWS IAM con los siguientes permisos mínimos:
 
 - `AmazonEC2ContainerRegistryFullAccess`: Acceso completo a Amazon ECR para crear repositorios, subir y gestionar imágenes de contenedor.
 
-Configura AWS CLI con las credenciales de este usuario ejecutando:
-
+2. Configura AWS CLI con las credenciales de este usuario ejecutando:
 ```bash
 aws configure
 ```
 
 ### Docker
-Construye la imagen del contenedor Docker:
+1. Construye la imagen del contenedor Docker:
 ```bash
 cd /mnt/path/to/project_directory
 ```
@@ -25,7 +24,7 @@ cd /mnt/path/to/project_directory
 docker build -t your_image_name -f docker/Dockerfile .
 ```
 
-Etiqueta y sube la imagen a AWS ECR:
+2. Etiqueta y sube la imagen a AWS ECR:
 ```bash
 aws ecr get-login-password --region your_region | docker login --username AWS --password-stdin your_account_id.dkr.ecr.your_region.amazonaws.com
 ```
