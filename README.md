@@ -1,6 +1,6 @@
 # Proyecto de Obtención de Datos Meteorológicos y Análisis con AWS
 
-Este proyecto utiliza AWS Lambda, Docker, AWS Glue y AWS Athena para obtener datos meteorológicos de múltiples ubicaciones utilizando la API de Weatherbit, almacenarlos en un bucket de Amazon S3, cargarlos en una base de datos administrada por AWS Glue y realizar consultas utilizando AWS Athena.
+Este proyecto utiliza AWS Lambda, Docker, AWS SNS, AWS Glue y AWS Athena para obtener datos meteorológicos de múltiples ubicaciones utilizando la API de Weatherbit, almacenarlos en un bucket de Amazon S3, cargarlos en una base de datos administrada por AWS Glue y realizar consultas utilizando AWS Athena.
 
 ## Requisitos
 Para trabajar con este proyecto, asegúrate de tener instalado lo siguiente:
