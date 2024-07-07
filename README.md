@@ -19,17 +19,21 @@ aws configure
 ### Docker
 Construye la imagen del contenedor Docker:
 ```bash
-docker build -t nombre_de_tu_imagen .
+cd /mnt/path/to/project_directory
 ```
+```bash
+docker build -t your_image_name -f docker/Dockerfile .
+```
+
 Etiqueta y sube la imagen a AWS ECR:
 ```bash
-aws ecr get-login-password --region tu_region | docker login --username AWS --password-stdin tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com
+aws ecr get-login-password --region your_region | docker login --username AWS --password-stdin your_account_id.dkr.ecr.your_region.amazonaws.com
 ```
 ```bash
-docker tag nombre_de_tu_imagen:latest tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_repositorio:latest
+docker tag your_image_name:latest your_account_id.dkr.ecr.your_region.amazonaws.com/your_repository_name:latest
 ```
 ```bash
-docker push tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_repositorio:latest
+docker push your_account_id.dkr.ecr.your_region.amazonaws.com/your_repository_name:latest
 ```
 
 ### Amazon S3
