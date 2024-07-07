@@ -2,6 +2,14 @@
 
 Este proyecto utiliza AWS Lambda, Docker, AWS Glue y AWS Athena para obtener datos meteorológicos de múltiples ubicaciones utilizando la API de Weatherbit, almacenarlos en un bucket de Amazon S3, cargarlos en una base de datos administrada por AWS Glue y realizar consultas utilizando AWS Athena.
 
+## Requisitos
+Para trabajar con este proyecto, asegúrate de tener instalado lo siguiente:
+* Docker: Versión 19.03 o superior. Descargar Docker
+* Python: Versión 3.6 o superior. Descargar Python
+* Acceso a AWS: Una cuenta de AWS con permisos para configurar servicios como Lambda, ECR, S3, etc.
+* AWS CLI: Herramienta necesaria para configurar y gestionar servicios de AWS.
+* Git: Para clonar y gestionar el código fuente desde un repositorio Git. Descargar Git 
+
 ## Configuración Inicial
 
 ### Usuario IAM y Configuración de AWS CLI
