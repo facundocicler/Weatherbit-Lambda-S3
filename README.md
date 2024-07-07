@@ -35,14 +35,14 @@ docker push tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_reposit
 ### AWS Lambda
 
 1. Crea un rol IAM para la función Lambda:
-            - Crea un nuevo rol IAM en la consola de IAM de AWS.
-            - Asigna la política `AWSLambdaBasicExecutionRole` para permitir a la función Lambda escribir registros en CloudWatch Logs.
-            - Asigna políticas adicionales según sea necesario, como acceso a S3, SNS, etc.
+   - Crea un nuevo rol IAM en la consola de IAM de AWS.
+   - Asigna la política `AWSLambdaBasicExecutionRole` para permitir a la función Lambda escribir registros en CloudWatch Logs.
+   - Asigna políticas adicionales según sea necesario, como acceso a S3, SNS, etc.
 
 2. Crea una función Lambda en la consola de AWS Lambda:
-            - Nombre de la función: Especifica un nombre para tu función Lambda.
-            - Entorno de ejecución: Selecciona Use container image y especifica la imagen que subiste a AWS ECR.
-            - Rol de ejecución: Selecciona el rol IAM que creaste anteriormente con los permisos necesarios.
+   - Nombre de la función: Especifica un nombre para tu función Lambda.
+   - Entorno de ejecución: Selecciona Use container image y especifica la imagen que subiste a AWS ECR.
+   - Rol de ejecución: Selecciona el rol IAM que creaste anteriormente con los permisos necesarios.
 
 3. Configura las variables de entorno en la función Lambda:
    - Después de crear la función Lambda, configura las siguientes variables de entorno en la consola de AWS Lambda:
