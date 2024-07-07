@@ -9,9 +9,9 @@ Para trabajar con este proyecto, asegúrate de tener instalado lo siguiente:
 * Acceso a AWS: Una cuenta de AWS con permisos para configurar servicios como Lambda, ECR, S3, etc.
 * AWS CLI: Herramienta necesaria para configurar y gestionar servicios de AWS.
 
-## Configuración Inicial
+## Configuración
 
-## Usuario IAM y Configuración de AWS CLI
+### Usuario IAM y Configuración de AWS CLI
 1. Antes de comenzar, asegúrate de tener configurado un usuario en AWS IAM con los siguientes permisos mínimos:
    - `AmazonEC2ContainerRegistryFullAccess`: Acceso completo a Amazon ECR para crear repositorios, subir y gestionar imágenes de contenedor.
 
@@ -20,7 +20,7 @@ Para trabajar con este proyecto, asegúrate de tener instalado lo siguiente:
 aws configure
 ```
 
-## Docker
+### Docker
 1. Construye la imagen del contenedor Docker:
 ```bash
 cd /mnt/path/to/project_directory
@@ -40,7 +40,7 @@ docker tag your_image_name:latest your_account_id.dkr.ecr.your_region.amazonaws.
 docker push your_account_id.dkr.ecr.your_region.amazonaws.com/your_repository_name:latest
 ```
 
-## Amazon S3
+### Amazon S3
 1. Crea dos buckets en Amazon S3:
 
    - **Bucket de Ubicaciones**: Utilizado para almacenar el archivo `locations.csv` y cualquier otro archivo relacionado con las ubicaciones.
@@ -51,7 +51,7 @@ docker push your_account_id.dkr.ecr.your_region.amazonaws.com/your_repository_na
    - Accede al bucket de ubicaciones a través de la consola de AWS S3.
    - Haz clic en "Cargar" y selecciona el archivo `locations.csv` desde tu sistema local.
 
-## AWS Lambda
+### AWS Lambda
 1. Crea un rol IAM para la función Lambda:
    - Crea un nuevo rol IAM en la consola de IAM de AWS.
    - Asigna la política `AWSLambdaBasicExecutionRole` para permitir a la función Lambda escribir registros en CloudWatch Logs.
@@ -72,7 +72,7 @@ docker push your_account_id.dkr.ecr.your_region.amazonaws.com/your_repository_na
      SNS_TOPIC_ARN: ARN del tema SNS para notificaciones.
      ```
      
-## AWS Glue y Athena
+### AWS Glue y Athena
 1. Configura AWS Glue para cargar datos desde S3:
 - Crea una base de datos y tablas en AWS Glue para almacenar los datos meteorológicos.
 - Define un Crawler en AWS Glue para descubrir y cargar los datos desde el bucket BUCKET_REGISTRY.
