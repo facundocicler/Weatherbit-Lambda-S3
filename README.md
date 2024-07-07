@@ -31,23 +31,19 @@ docker tag nombre_de_tu_imagen:latest tu_id_de_cuenta.dkr.ecr.tu_region.amazonaw
 ```bash
 docker push tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_repositorio:latest
 ```
-### Creación de Buckets en Amazon S3
 
+### Amazon S3
 1. Crea dos buckets en Amazon S3:
 
    - **Bucket de Ubicaciones**: Utilizado para almacenar el archivo `locations.csv` y cualquier otro archivo relacionado con las ubicaciones.
    - **Bucket de Registro**: Utilizado para almacenar los archivos CSV generados por la función Lambda con los datos meteorológicos.
 
-### Subida del Archivo `locations.csv`
-
-1. Sube el archivo `locations.csv` al bucket de ubicaciones en Amazon S3:
+2. Sube el archivo `locations.csv` al bucket de ubicaciones en Amazon S3:
 
    - Accede al bucket de ubicaciones a través de la consola de AWS S3.
    - Haz clic en "Cargar" y selecciona el archivo `locations.csv` desde tu sistema local.
-   - Asegúrate de que el archivo esté en la ubicación especificada en la variable de entorno `FILE_LOCATIONS` para que la función Lambda pueda acceder a él correctamente.
 
 ### AWS Lambda
-
 1. Crea un rol IAM para la función Lambda:
    - Crea un nuevo rol IAM en la consola de IAM de AWS.
    - Asigna la política `AWSLambdaBasicExecutionRole` para permitir a la función Lambda escribir registros en CloudWatch Logs.
