@@ -5,10 +5,8 @@ Este proyecto utiliza AWS Lambda, Docker, AWS Glue y AWS Athena para obtener dat
 ## Configuración Inicial
 
 ### Usuario IAM y Configuración de AWS CLI
-
 1. Antes de comenzar, asegúrate de tener configurado un usuario en AWS IAM con los siguientes permisos mínimos:
-
-- `AmazonEC2ContainerRegistryFullAccess`: Acceso completo a Amazon ECR para crear repositorios, subir y gestionar imágenes de contenedor.
+   - `AmazonEC2ContainerRegistryFullAccess`: Acceso completo a Amazon ECR para crear repositorios, subir y gestionar imágenes de contenedor.
 
 2. Configura AWS CLI con las credenciales de este usuario ejecutando:
 ```bash
