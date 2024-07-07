@@ -4,8 +4,8 @@ Este proyecto utiliza AWS Lambda, Docker, AWS Glue y AWS Athena para obtener dat
 
 ## Requisitos
 Para trabajar con este proyecto, asegúrate de tener instalado lo siguiente:
-* Docker: Versión 19.03 o superior. Descargar Docker
-* Python: Versión 3.6 o superior. Descargar Python
+* Docker: Versión 19.03 o superior.
+* Python: Versión 3.6 o superior.
 * Acceso a AWS: Una cuenta de AWS con permisos para configurar servicios como Lambda, ECR, S3, etc.
 * AWS CLI: Herramienta necesaria para configurar y gestionar servicios de AWS.
 * Git: Para clonar y gestionar el código fuente desde un repositorio Git. Descargar Git 
