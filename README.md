@@ -46,13 +46,13 @@ docker push tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_reposit
 
 3. Configura las variables de entorno en la función Lambda:
    - Después de crear la función Lambda, configura las siguientes variables de entorno en la consola de AWS Lambda:
-            ```bash
-            WEATHERBIT_API_KEY: Tu clave API de Weatherbit.
-            BUCKET_LOCATIONS: Nombre de tu bucket de S3 para ubicaciones.
-            FILE_LOCATIONS: Ruta del archivo en el bucket de ubicaciones.
-            BUCKET_REGISTRY: Nombre de tu bucket de S3 para registro.
-            SNS_TOPIC_ARN: ARN del tema SNS para notificaciones.
-            ```
+     ```bash
+     WEATHERBIT_API_KEY: Tu clave API de Weatherbit.
+     BUCKET_LOCATIONS: Nombre de tu bucket de S3 para ubicaciones.
+     FILE_LOCATIONS: Ruta del archivo en el bucket de ubicaciones.
+     BUCKET_REGISTRY: Nombre de tu bucket de S3 para registro.
+     SNS_TOPIC_ARN: ARN del tema SNS para notificaciones.
+     ```
 
 
 
