@@ -53,7 +53,15 @@ docker push tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_reposit
      BUCKET_REGISTRY: Nombre de tu bucket de S3 para registro.
      SNS_TOPIC_ARN: ARN del tema SNS para notificaciones.
      ```
+     
+### AWS Glue y Athena
+1. Configura AWS Glue para cargar datos desde S3:
+- Crea una base de datos y tablas en AWS Glue para almacenar los datos meteorológicos.
+- Define un Crawler en AWS Glue para descubrir y cargar los datos desde el bucket BUCKET_REGISTRY.
 
+2. Configura AWS Athena para realizar consultas:
+- Crea tablas externas en AWS Athena para consultar los datos almacenados en AWS Glue.
+- Ejecuta consultas SQL en AWS Athena para analizar los datos meteorológicos almacenados.
 
 
 
