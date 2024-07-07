@@ -14,3 +14,20 @@ Configura AWS CLI con las credenciales de este usuario ejecutando:
 
 ```bash
 aws configure
+```
+
+### Docker
+Construye la imagen del contenedor Docker:
+```bash
+docker build -t nombre_de_tu_imagen .
+```
+Etiqueta y sube la imagen a AWS ECR:
+```bash
+aws ecr get-login-password --region tu_region | docker login --username AWS --password-stdin tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com
+```
+```bash
+docker tag nombre_de_tu_imagen:latest tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_repositorio:latest
+```
+```bash
+docker push tu_id_de_cuenta.dkr.ecr.tu_region.amazonaws.com/nombre_de_tu_repositorio:latest
+```
