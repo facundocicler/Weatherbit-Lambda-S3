@@ -1,0 +1,7 @@
+import os
+
+API_KEY = os.environ['WEATHERBIT_API_KEY']
+BUCKET_LOCATIONS = os.environ['BUCKET_LOCATIONS']
+FILE_LOCATIONS = os.environ['FILE_LOCATIONS']
+BUCKET_REGISTRY = os.environ['BUCKET_REGISTRY']
+SNS_TOPIC_ARN = os.environ['SNS_TOPIC_ARN']
