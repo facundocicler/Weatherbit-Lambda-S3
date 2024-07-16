@@ -80,8 +80,3 @@ docker push your_account_id.dkr.ecr.your_region.amazonaws.com/your_repository_na
 2. Configura AWS Athena para realizar consultas:
 - Crea tablas externas en AWS Athena para consultar los datos almacenados en AWS Glue.
 - Ejecuta consultas SQL en AWS Athena para analizar los datos meteorológicos almacenados.
-
-## Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
-
-            
